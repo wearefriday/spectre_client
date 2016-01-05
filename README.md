@@ -7,7 +7,7 @@ A gem to upload to Spectre.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'spectre_client'
+gem "spectre_client", git: 'ssh://git@git.wearefriday.com:7999/wafi/spectre_client.git'
 ```
 
 And then execute:
