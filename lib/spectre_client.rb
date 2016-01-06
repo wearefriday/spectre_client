@@ -10,7 +10,7 @@ module SpectreClient
         suite: suite_name
       )
       response = JSON.parse(request.to_str)
-      @run_id = response['run_id']
+      @run_id = response['id']
     end
 
     def submit_test(name, browser, platform, width, screenshot)
