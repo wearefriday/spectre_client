@@ -24,8 +24,7 @@ module SpectreClient
           screenshot: screenshot
         }
       )
-      response = JSON.parse(request.to_str)
-      puts "#{name}, diff #{response['diff']}%"
+      JSON.parse(request.to_str, symbolize_names:true)
     end
   end
 end
