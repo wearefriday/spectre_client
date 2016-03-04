@@ -18,7 +18,7 @@ module SpectreClient
       @run_id = response['id']
     end
 
-    def submit_test(name, browser, platform, width, screenshot)
+    def submit_test(name, browser, platform, size, screenshot)
       request = RestClient::Request.execute(
         method: :post,
         url: "#{@url_base}/tests",
@@ -30,7 +30,7 @@ module SpectreClient
             name: name,
             platform: platform,
             browser: browser,
-            width: width,
+            size: size,
             screenshot: screenshot
           }
         }
