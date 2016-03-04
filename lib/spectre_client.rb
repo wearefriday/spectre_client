@@ -23,7 +23,7 @@ module SpectreClient
         method: :post,
         url: "#{@url_base}/tests",
         timeout: 120,
-        :multipart: true,
+        multipart: true,
         payload: {
           test: {
             run_id: @run_id,
