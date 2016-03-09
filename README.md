@@ -1,13 +1,13 @@
-# SpectreClient
+# Spectre ruby client
 
-A gem to upload to Spectre.
+A gem to upload screenshots to [Spectre](https://github.com/wearefriday/spectre).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "spectre_client", git: 'ssh://git@git.wearefriday.com:7999/wafi/spectre_client.git'
+gem 'spectre_client', git: 'git@github.com:wearefriday/spectre_client.git'
 ```
 
 And then execute:
@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-Install the gem and use `SpectreClient::Client.new('Nuffield', 'Templates', "http://localhost:3000")`
+Create a client object:
+
+    client = SpectreClient::Client.new('Project Name', 'Suite Name', "http://spectre.local")
 
 ## Development
 
@@ -30,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/spectre_client.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/wearefriday/spectre_client>.
 
 
 ## License
