@@ -18,7 +18,7 @@ module SpectreClient
       @run_id = response['id']
     end
 
-    def submit_test(name, browser, platform, size, screenshot, source_url)
+    def submit_test(name, browser, platform, size, screenshot, source_url = "", fuzz_level = "")
       request = RestClient::Request.execute(
         method: :post,
         url: "#{@url_base}/tests",
@@ -32,11 +32,12 @@ module SpectreClient
             browser: browser,
             size: size,
             screenshot: screenshot,
-            source_url: source_url
+            source_url: source_url,
+            fuzz_level: fuzz_level
           }
         }
       )
-      JSON.parse(request.to_str, symbolize_names:true)
+      JSON.parse(request.to_str, symbolize_names: true)
     end
   end
 end

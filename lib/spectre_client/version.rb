@@ -1,3 +1,3 @@
 module SpectreClient
-  VERSION = "0.1.7"
+  VERSION = "0.1.86"
 end
