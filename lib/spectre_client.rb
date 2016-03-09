@@ -18,7 +18,10 @@ module SpectreClient
       @run_id = response['id']
     end
 
-    def submit_test(name, browser, platform, size, screenshot, source_url = "", fuzz_level = "")
+    def submit_test(options = {})
+      source_url =  options[:source_url] || ''
+      fuzz_level =  options[:fuzz_level] || ''
+
       request = RestClient::Request.execute(
         method: :post,
         url: "#{@url_base}/tests",
@@ -27,11 +30,11 @@ module SpectreClient
         payload: {
           test: {
             run_id: @run_id,
-            name: name,
-            platform: platform,
-            browser: browser,
-            size: size,
-            screenshot: screenshot,
+            name: options[:name],
+            platform: options[:platform],
+            browser: options[:browser],
+            size: options[:size],
+            screenshot: options[:screenshot],
             source_url: source_url,
             fuzz_level: fuzz_level
           }
