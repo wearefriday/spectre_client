@@ -21,6 +21,7 @@ module SpectreClient
     def submit_test(options = {})
       source_url =  options[:source_url] || ''
       fuzz_level =  options[:fuzz_level] || ''
+      highlight_colour = options[:highlight_colour] || 'red'
 
       request = RestClient::Request.execute(
         method: :post,
@@ -31,12 +32,12 @@ module SpectreClient
           test: {
             run_id: @run_id,
             name: options[:name],
-            platform: options[:platform],
             browser: options[:browser],
             size: options[:size],
             screenshot: options[:screenshot],
             source_url: source_url,
-            fuzz_level: fuzz_level
+            fuzz_level: fuzz_level,
+            highlight_colour: highlight_colour
           }
         }
       )
