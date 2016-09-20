@@ -26,11 +26,15 @@ A run will be created for you when creating a new instance of a `SpectreClient::
 
 Create a client object:
 
-    client = SpectreClient::Client.new('Project Name', 'Suite Name', "http://spectre.local")
+```ruby
+client = SpectreClient::Client.new('Project Name', 'Suite Name', "http://spectre.local")
+```
 
 Submit a test:
 
-  client.submit_test(options_hash)
+```ruby
+client.submit_test(options_hash)
+```
 
 The method accepts a hash with the following keys:
 
@@ -44,13 +48,15 @@ The method accepts a hash with the following keys:
 
 Example:
 
-  client.submit_test({
-    name: 'Homepage',
-    browser: 'Firefox',
-    size: '1200',
-    screenshot: File.new('homepage.png', 'rb'),
-    source_url: 'http://mysite.dev/'
-  })
+```ruby
+client.submit_test({
+  name: 'Homepage',
+  browser: 'Firefox',
+  size: '1200',
+  screenshot: File.new('homepage.png', 'rb'),
+  source_url: 'http://mysite.dev/'
+})
+```
 
 ## Development
 
