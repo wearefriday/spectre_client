@@ -44,7 +44,7 @@ The method accepts a hash with the following keys:
 * `screenshot` (required) — a reference to a `File`
 * `source_url` (optional) — the URL of the page you've taken a screenshot of, Spectre will link tests to this URL for convenience
 * `fuzz_level` (optional) — how forgiving should the comparison be, as a percentage, to allow for slight variations in browser sub-pixel rendering/antialiasing. Defaults to `30%` (a lower number means less forgiving)
-* `highlight_colour` (optional) — the colour used in the diff images. Defaults to `red`. (See ImageMagick's [`highlight-color`](http://www.imagemagick.org/script/command-line-options.php#highlight-color))
+* `highlight_colour` (optional) — the colour used in the diff images. Defaults to `ff0000`. (See ImageMagick's [`highlight-color`](http://www.imagemagick.org/script/command-line-options.php#highlight-color))
 
 Example:
 
