@@ -21,7 +21,7 @@ module SpectreClient
     def submit_test(options = {})
       source_url =  options[:source_url] || ''
       fuzz_level =  options[:fuzz_level] || ''
-      highlight_colour = options[:highlight_colour] || 'red'
+      highlight_colour = options[:highlight_colour] || ''
 
       request = RestClient::Request.execute(
         method: :post,
