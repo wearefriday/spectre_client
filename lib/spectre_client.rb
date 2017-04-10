@@ -1,5 +1,6 @@
 require "spectre_client/version"
 require "rest_client"
+require "json"
 
 module SpectreClient
   class Client
@@ -37,7 +38,8 @@ module SpectreClient
             screenshot: options[:screenshot],
             source_url: source_url,
             fuzz_level: fuzz_level,
-            highlight_colour: highlight_colour
+            highlight_colour: highlight_colour,
+            crop_area: options[:crop_area]
           }
         }
       )
