@@ -1,3 +1,7 @@
+# No Longer being maintainer here.
+
+Please use an active fork or consider using percy.io
+
 # Spectre ruby client
 
 A gem to upload screenshots to [Spectre](https://github.com/wearefriday/spectre).
